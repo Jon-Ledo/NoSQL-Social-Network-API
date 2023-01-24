@@ -1,0 +1,28 @@
+{
+  "name": "02-challenge",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "script.js",
+  "scripts": {
+    "devStart": "nodemon script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jon-Ledo/NoSQL-Social-Network-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jon-Ledo/NoSQL-Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/Jon-Ledo/NoSQL-Social-Network-API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
