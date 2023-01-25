@@ -9,21 +9,20 @@ const reactionSchema = new Schema(
     reactionBody: {
       type: String,
       required: true,
+      minLength: 1,
       maxLength: 280,
     },
     username: {
       type: String,
       required: true,
     },
-    // username: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'User',
-    // },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (date) => moment(date).format('MMM DD, YYYY [at] hh:mm a'),
-    },
+    createdAt: [
+      {
+        type: Date,
+        default: Date.now,
+        get: (date) => moment(date).format('MMM DD, YYYY [at] hh:mm a'),
+      },
+    ],
   },
   {
     toJSON: {
