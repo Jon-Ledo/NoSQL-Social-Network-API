@@ -49,7 +49,7 @@ Overview of all the routes available in this project:
 
 ## License
 
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)(https://choosealicense.com/licenses/mit/)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 For more information about the licensing of this project, click the above image or follow this link https://choosealicense.com/licenses/mit/
 
