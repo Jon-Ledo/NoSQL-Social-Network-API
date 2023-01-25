@@ -1,4 +1,8 @@
+const router = require('express').Router()
+const { getAllThoughts } = require('../../controllers/thoughtController')
+
 // **`/api/thoughts`**
+router.route('/').get(getAllThoughts)
 
 // - `GET` to get all thoughts
 
@@ -26,3 +30,5 @@
 // - `POST` to create a reaction stored in a single thought's `reactions` array field
 
 // - `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
+
+module.exports = router
