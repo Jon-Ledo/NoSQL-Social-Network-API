@@ -55,8 +55,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err))
   },
-  // **`/api/users/:userId/friends/:friendId`**
-  // - `POST` to add a new friend to a user's friend list
+  // POST add friend
   addNewFriend(req, res) {
     User.findOneAndUpdate(
       // userId of the user who is adding friend
@@ -65,8 +64,7 @@ module.exports = {
       { $addToSet: { friends: [req.params.friendId] } },
       { new: true }
     )
-      .populate('friends', 'username')
-      // .select('-__v')
+      .populate('friends')
       .then((userWithFriend) =>
         !userWithFriend
           ? res.status(404).json({ message: 'No user found with that id.' })
@@ -81,8 +79,7 @@ module.exports = {
       { $pull: { friends: req.params.friendId } },
       { new: true }
     )
-      // .populate({ path: 'friends', select: '-__v' })
-      // .select('-__v')
+
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user found with that id.' })
