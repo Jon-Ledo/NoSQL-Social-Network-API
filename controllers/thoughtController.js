@@ -10,8 +10,8 @@ module.exports = {
   // GET one thought
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
-      // .select('-__v')
-      // .populate({path: 'reactions', select: '-__v'})
+      .select('-__v')
+      .populate({ path: 'username', select: '-__v' })
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that id' })
