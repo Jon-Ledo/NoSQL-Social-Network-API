@@ -16,10 +16,12 @@ const thoughtSchema = new Schema(
       get: (date) => moment(date).format('MMM DD, YYYY [at] hh:mm a'),
     },
     // (The user that created this thought)
-    username: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
+    username: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'user',
+      },
+    ],
     reactions: [reactionSchema],
   },
   {
