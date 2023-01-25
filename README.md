@@ -20,6 +20,8 @@ Seed data is provided, once project is installed and the commands are run.
 
 Video showing what api routes are being used through [Postman](https://www.postman.com/)
 
+https://www.youtube.com/watch?v=WI_ZxmpalYo
+
 ## Packages
 
 Project put together using the following libraries/packages:
