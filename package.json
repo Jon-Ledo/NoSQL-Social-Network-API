@@ -4,7 +4,9 @@
   "description": "## Your Task",
   "main": "script.js",
   "scripts": {
-    "devStart": "nodemon script.js"
+    "devStart": "nodemon script.js",
+    "seed": "node utils/seed.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
