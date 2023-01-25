@@ -12,9 +12,10 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now(),
+      default: Date.now,
       get: (date) => moment(date).format('MMM DD, YYYY [at] hh:mm a'),
     },
+    // (The user that created this thought)
     username: {
       type: Schema.Types.ObjectId,
       ref: 'User',
@@ -23,7 +24,7 @@ const thoughtSchema = new Schema(
   },
   {
     toJSON: {
-      getters: true,
+      getters: true, // runs get function on query
       virtuals: true,
     },
     id: false,
